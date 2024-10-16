@@ -1,0 +1,73 @@
+div {
+  user-select: none;
+}
+
+* {
+  font-size: 2vmin;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.container {
+  position: absolute;
+  width: 45rem;
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+
+.poker,
+.poker_top {
+  position: absolute;
+  width: 20rem;
+  height: 26rem;
+  border: 0.15rem solid #fff;
+  border-radius: 1.5rem;
+  background-color: #17f700;
+  transform-origin: bottom left;
+  overflow: hidden;
+}
+
+.poker img {
+  position: relative;
+  width: 100%;
+}
+
+.poker_top {
+  background-color: #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.poker_top:hover {
+  background-color: #aaa;
+}
+
+.poker1 {
+  transform: rotate(-10deg);
+}
+
+.poker2 {
+  transform: rotate(-6deg) translate(35%, -12%);
+}
+
+.poker3 {
+  transform: rotate(-2deg) translate(65%, -19%);
+}
+
+.poker4 {
+  transform: rotate(2deg) translate(95%, -26%);
+}
+
+.poker5 {
+  transform: rotate(6deg) translate(125%, -23%);
+}
