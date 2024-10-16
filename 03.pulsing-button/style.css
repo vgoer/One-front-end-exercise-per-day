@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9rem;
+  background-color: #333;
+}
+
+.pulse ion-icon{
+  font-size: 35px;
+  position: absolute;
+  padding: 10px;
+}
+
+.pulse{
+  width: 3rem;
+  color: #fff;
+  transition: all .5s ease;
+  background-color: #35D1E6;
+  text-align: center;
+}
+
+.pulse,
+.pulse::before,
+.pulse::after{
+  content: "";
+  display: grid;
+  grid-area: 1/1;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 #35D1E633;
+  animation: pulsing 3s linear infinite var(--s,0s);
+}
+
+.pulse::before{
+  --s:1s
+}
+
+.pulse::after{
+  --s:2s
+}
+
+.pulse:hover{
+  background-color: #35D1E633;
+  color: #ffffff99;
+}
+
+@keyframes pulsing{
+  to{
+    box-shadow: 0 0 0 5rem #0000;
+  }
+
+}
